@@ -30,7 +30,7 @@ async def on_message(message):
         #print(data["time"]+"\n"+data["date"])
         em = discord.Embed()
         em.set_thumbnail(url = "https://cdn.discordapp.com/attachments/367767323953725443/367957942923952128/the_night_watch_edit_2.png")
-        em.set_author(name = "Server", icon_url = "https://designmodo.com/wp-content/uploads/2015/09/webview.gif")
+        em.set_author(name = "AE Server", icon_url = "https://designmodo.com/wp-content/uploads/2015/09/webview.gif")
         em.add_field(name = "Time:", value = data["time"],inline = True)
         em.add_field(name = "Date: ", value = data["date"], inline = True)
         em.colour = discord.Colour.green()
