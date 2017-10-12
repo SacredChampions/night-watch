@@ -9,7 +9,7 @@ async def on_ready():
     print("LOGGED IN AS...........")
     print(client.user.name)
     print(client.user.id)
-    #await client.change_presence(game = discord.Game(name = "$servertime", type = 0))
+    await client.change_presence(game = discord.Game(name = "$servertime", type = 0))
 
 @client.event
 async def on_message(message):
