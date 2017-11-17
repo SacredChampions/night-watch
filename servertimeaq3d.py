@@ -1,8 +1,10 @@
+import os
 from bs4 import BeautifulSoup
 import requests
 import re
 import discord
 client = discord.Client()
+tokens = os.environ.get('TOKEN')
 
 @client.event
 async def on_ready():
@@ -37,4 +39,5 @@ async def on_message(message):
         em.set_footer(text = "|Night Watch| requested by {}".format(message.author.name),icon_url = message.author.avatar_url)
         await client.send_message(channel,embed = em)
 print("Starting........")
-client.run("MzY4MDk4MzY1MzQwMTIzMTM3.DMFB2g.qnukkTvzbb65-KM-yMZfNQ0f-8c")
+safe_token = "{}".format(tokens)
+client.run(safe_token, bot=True, reconnect=True)
